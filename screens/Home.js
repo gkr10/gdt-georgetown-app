@@ -1,22 +1,43 @@
-import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import React, { useState } from 'react';
+import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import HomeStyles from '../HomeStyles';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const Home = ({navigation}) => {
     return (
-        <View style={styles.container}>
-            <Text>Open up App.js to start working on your app!</Text>
-            <StatusBar style="auto" />
-        </View>
+        <SafeAreaView>
+            <View style={styles.container}>
+                <View style= {{marginVertical: '3%'}}>
+
+                </View>
+                <StatusBar style="auto" />
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
+                    <Text style={HomeStyles.ButtonText1}>GUTS Bus</Text>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}>
+                    <Text style={HomeStyles.ButtonText1}>Check Flex Dollars</Text>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
+                    <Text style={HomeStyles.ButtonText1}>Building Access Card</Text>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}>
+                    <Text style={HomeStyles.ButtonText1}>Dining Options</Text>
+                </TouchableOpacity>
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
+                    <Text style={HomeStyles.ButtonText1}>GU Farmer's Market</Text>
+                </TouchableOpacity>
+            </View>
+        </SafeAreaView>
+        
     );
 }
-
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'center',
+      //justifyContent: 'space-evenly'
     },
 });
 
