@@ -5,10 +5,11 @@ import HomeStyles from '../HomeStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const Home = ({navigation}) => {
+    const {width, height} = Dimensions.get('window');
     return (
         <SafeAreaView>
             <View style={styles.container}>
-                <View style= {{marginVertical: '3%'}}>
+                <View style= {{marginVertical: height * .01}}>
 
                 </View>
                 <StatusBar style="auto" />
