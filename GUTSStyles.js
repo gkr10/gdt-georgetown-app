@@ -4,13 +4,15 @@ import { StyleSheet, Dimensions } from 'react-native';
 const {width, height} = Dimensions.get('window');
 
 const GUTSStyles = StyleSheet.create({
-    vector: {
-    position: 'absolute',
-    left: '16.67%',
-    right: '16.67%',
-    top: '41.67%',
-    bottom: '41.67%',
-    backgroundColor: '#ffffff'
+    openModal: {
+        fontFamily: 'SourceSansPro-SemiBold',
+        fontSize: 30,
+        color: "#fff",
+        marginLeft: '60%',
+        marginTop: '10%',
+        fontWeight: "600",
+        textAlign: "left"
+        
     },
     GutsTransportBox: {
         justifyContent: 'flex-start',
@@ -21,9 +23,10 @@ const GUTSStyles = StyleSheet.create({
         elevation: 8,
         borderRadius: 25,
         width: width * .9,
-        height: height * .33,
+        height: height * .4,
         shadowOffset: {width:4, height: 4},
         shadowOpacity: .25,
+        // flex: 1
         //elevation: 8,
         //borderRadius: 25,
         //marginTop: 100,
@@ -32,7 +35,7 @@ const GUTSStyles = StyleSheet.create({
         fontFamily: 'SourceSansPro-SemiBold',
         fontSize: 25,
         color: "#fff",
-        marginLeft: '10%',
+        marginLeft: '5%',
         marginTop: '10%',
         
         fontWeight: "600",
@@ -61,6 +64,24 @@ const GUTSStyles = StyleSheet.create({
         
         //lineHeight: 18,
     },
+    DepatureSmallText: {
+        fontFamily: 'SourceSansPro-SemiBold',
+        fontSize: 11,
+        color: "#BBBCBC",
+        // alignSelf: "center",
+        fontWeight: "600",
+        marginLeft: '5%',
+        marginTop: '2%',
+    },
+    DeputureSubheadText: {
+        fontFamily: 'SourceSansPro-SemiBold',
+        fontSize: 18,
+        color: "#fff",
+        // alignSelf: "center",
+        fontWeight: "600",
+        marginLeft: '5%',
+        marginTop: '5%',
+    },
     Rectangle1: { 
         backgroundColor:'#D7503E', 
         flex: 0.01,
@@ -69,9 +90,42 @@ const GUTSStyles = StyleSheet.create({
         },
     Rectangle2: {
         backgroundColor:'#00B5E2', 
-        flex: 0.03,
+        flex: 0.02,
         marginLeft: '5%',
+        marginTop: '5%',
+        marginRight: '0%'
+    },
+    hideButton: {
+        marginLeft:'5%',
+        color: '#000',
+        marginBottom: '5%',
         marginTop: '5%'
+    },
+    tableHeader: {
+        color: '#000'
+    },
+    modal: {
+        justifyContent: 'center',
+        // alignSelf:'center',
+        marginVertical: '30%',
+        backgroundColor: '#fff',
+        borderRadius: 5,
+        elevation: 8,
+        borderRadius: 25,
+        width: width * .9,
+        height: height * .5,
+        marginLeft: '5%',
+        shadowOffset: {width:4, height: 4},
+        shadowOpacity: .25,
+        borderColor:'#fff'
+    },
+    dupontTimes: {
+        color: '#000',
+        // marginLeft: '35%',
+        fontWeight: 'bold',
+        fontSize: 25,
+        textAlign: 'center',
+        marginBottom: '3%'
     }
 
 })
