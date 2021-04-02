@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Alert, Button, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { Button, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -64,24 +64,24 @@ function LandingScreen({ navigation }) {
 
       <View style={styles.twobuttons}>
         <TouchableOpacity
-          style={styles.gridbuttonL}
+          style={styles.gridbutton}
           onPress={() => navigation.push('TodaysVendors')}>
           <Text style={styles.buttontext}>Today's Vendors</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.gridbuttonR}
+          style={styles.gridbutton}
           onPress={() => navigation.push('PopUp')}>
           <Text style={styles.buttontext}>Pop-Up (Seasonal)</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.twobuttons}>
         <TouchableOpacity
-          style={styles.gridbuttonL}
+          style={styles.gridbutton}
           onPress={() => navigation.push('CommunityVendors')}>
           <Text style={styles.buttontext}>Community Vendors</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.gridbuttonR}
+          style={styles.gridbutton}
           onPress={() => navigation.push('AllVendors')}>
           <Text style={styles.buttontext}>All Vendors</Text>
         </TouchableOpacity>
@@ -128,25 +128,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  gridbuttonL: {
-    marginTop: 50,
-    alignSelf: 'center',
-    marginRight: 20,
-    height: 140,
-    width: 190,
-    borderRadius: 35,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#725B45',
-  },
-  gridbuttonR: {
+  gridbutton: {
     marginTop: 50,
     alignSelf: 'center',
     height: 140,
     width: 190,
     borderRadius: 35,
     alignItems: 'center',
-    justifyContent: 'center',
+    marginHorizontal: 10,
+    justifyContent: 'space-evenly',
     backgroundColor: '#725B45',
   },
   buttontext: {
