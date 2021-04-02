@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Alert, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export default function App() {
+function landingpage() {
   return (
     <ScrollView style={styles.parent}>
       <View style={styles.hview}>
