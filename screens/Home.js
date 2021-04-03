@@ -13,7 +13,7 @@ const Home = ({navigation}) => {
 
                 </View>
                 <StatusBar style="auto" />
-                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
+                <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('GUTS')} style={HomeStyles.ButtonContainer1}>
                     <Text style={HomeStyles.ButtonText1}>GUTS Bus</Text>
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}>
