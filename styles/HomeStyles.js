@@ -35,6 +35,23 @@ const HomeStyles = StyleSheet.create({
         //borderRadius: 25,
         //marginTop: 100,
     },
+
+    ButtonContainer3: {
+        justifyContent: 'space-evenly',
+        alignSelf:'center',
+        marginVertical: '5%',
+        backgroundColor: '#45522a',
+        borderRadius: 5,
+        elevation: 8,
+        borderRadius: 25,
+        width: width * .9,
+        height: height * .10,
+        shadowOffset: {width:3, height: 4},
+        shadowOpacity: .25,
+        //elevation: 8,
+        //borderRadius: 25,
+        //marginTop: 100,
+    },
     ButtonText1: {
         fontFamily: 'SourceSansPro-SemiBold',
         fontSize: 25,

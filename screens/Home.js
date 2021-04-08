@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity} from 'react-native';
-
+import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity, ScrollView} from 'react-native';
 import Modal from 'react-native-modal';
 import { StatusBar } from 'expo-status-bar';
 import HomeStyles from '../styles/HomeStyles';
 import { LinearGradient } from 'expo-linear-gradient';
+
+
 
 const Home = ({navigation}) => {
     const {width, height} = Dimensions.get('window');
@@ -18,7 +19,7 @@ const Home = ({navigation}) => {
         return date + '/' + month + '/' + year;//format: dd-mm-yyyy;
   }
     return (
-        <SafeAreaView>
+        <ScrollView>
             <View style={styles.container}>
                 <Modal
                     animationType = "slide"
@@ -41,7 +42,7 @@ const Home = ({navigation}) => {
 
                 </View>
                 <StatusBar style="auto" />
-                <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('GUTS')} style={HomeStyles.ButtonContainer1}>
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
                     <Text style={HomeStyles.ButtonText1}>GUTS Bus</Text>
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}>
@@ -58,9 +59,13 @@ const Home = ({navigation}) => {
                 <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
                     <Text style={HomeStyles.ButtonText1}>GU Farmer's Market</Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('LogIn')} style={HomeStyles.ButtonContainer3}>
+                    <Text style={HomeStyles.ButtonText1}>Log In</Text>
+                </TouchableOpacity>
                 
             </View>
-        </SafeAreaView>
+        </ScrollView>
         
     );
 }

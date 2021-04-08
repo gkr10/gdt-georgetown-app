@@ -1,4 +1,5 @@
 .DS_Store
-.expo/*
+.expo/
 node_modules/
 yarn.lock
+.vscode/
