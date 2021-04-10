@@ -9,6 +9,7 @@ import Home from './Home';
 import { ScrollView, TouchableHighlight } from 'react-native-gesture-handler';
 import  dupontTableData  from '../assets/dupontData';
 import rosslynTableData from '../assets/rosslynData';
+import { BlurView } from 'expo-blur';
 
 // var fs = require ('fs');
 // let departTimes = JSON.parse(JSON.stringify(dupontData))["depart times"]
@@ -34,7 +35,7 @@ const GUTS = ({navigation}) => {
     const [rosslynModalVisible, setRosslynModalVisible] = useState(false);
     return (
         <SafeAreaView>
-            <ScrollView>
+            <ScrollView style={{}}>
                 <View style={styles.container}>
                     <View style= {{marginVertical: height * .01}}>
 
@@ -52,10 +53,11 @@ const GUTS = ({navigation}) => {
                                     <Text style={GUTSStyles.openModal}>...</Text>
                                 </TouchableOpacity>
                                 <Modal animationType="slide" transparent={true} visible={dupontModalVisible} >
+                                <BlurView tint='dark' intensity={100} style={StyleSheet.absoluteFill}>
                                     <View style={GUTSStyles.modal}>
                                         
                                         <TouchableOpacity
-                                            
+                                            // style={{width:'25%'}}
                                             onPress={() => {
                                                 setDupontModalVisible(!dupontModalVisible);
                                             }}>
@@ -86,6 +88,7 @@ const GUTS = ({navigation}) => {
                                         {/* <Text sytle={{color: '#fff'}}>{JSON.parse(dupontData)}</Text> */}
                                         
                                     </View>
+                                    </BlurView>
                                 </Modal>
                             </View>
                         </View>
@@ -124,6 +127,7 @@ const GUTS = ({navigation}) => {
                                     <Text style={GUTSStyles.openModal}>...</Text>
                                 </TouchableOpacity>
                                 <Modal animationType="slide" transparent={true} visible={rosslynModalVisible} >
+                                <BlurView tint='dark' intensity={100} style={StyleSheet.absoluteFill}>
                                     <View style={GUTSStyles.modal}>
                                         
                                         <TouchableOpacity
@@ -158,6 +162,7 @@ const GUTS = ({navigation}) => {
                                         {/* <Text sytle={{color: '#fff'}}>{JSON.parse(dupontData)}</Text> */}
                                         
                                     </View>
+                                    </BlurView>
                                 </Modal>
                             </View>
                         </View>
