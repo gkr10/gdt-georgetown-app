@@ -8,7 +8,7 @@ const GUTSStyles = StyleSheet.create({
         fontFamily: 'SourceSansPro-SemiBold',
         fontSize: 30,
         color: "#fff",
-        marginLeft: '60%',
+        marginLeft: '70%',
         marginTop: '10%',
         fontWeight: "600",
         textAlign: "left"
@@ -113,11 +113,12 @@ const GUTSStyles = StyleSheet.create({
         elevation: 8,
         borderRadius: 25,
         width: width * .9,
-        height: height * .5,
+        height: height * .8,
         marginLeft: '5%',
         shadowOffset: {width:4, height: 4},
         shadowOpacity: .25,
-        borderColor:'#fff'
+        borderColor:'#fff',
+        paddingBottom:'10%'
     },
     dupontTimes: {
         color: '#000',
