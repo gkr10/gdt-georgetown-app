@@ -8,7 +8,7 @@ const GUTSStyles = StyleSheet.create({
         fontFamily: 'SourceSansPro-SemiBold',
         fontSize: 30,
         color: "#fff",
-        marginLeft: '60%',
+        marginLeft: '70%',
         marginTop: '10%',
         fontWeight: "600",
         textAlign: "left"

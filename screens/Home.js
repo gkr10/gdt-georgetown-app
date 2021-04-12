@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity, Modal, Button} from 'react-native';
+import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity, Button} from 'react-native';
 // import React, { useState, useEffect } from 'react';
 // import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity} from 'react-native';
 import moment from 'moment';
@@ -50,27 +50,18 @@ const Home = ({navigation}) => {
                         <Text style = {HomeStyles.modalText}>GoCard Number:</Text>
                     </View>
                 </Modal>
-                <View style= {{marginVertical: height * .01}}>
-
-                </View>
-                <StatusBar style="auto" />
-                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1} 
-                onPress={()=> navigation.push("GUTS")}>
-                    <Text style={HomeStyles.ButtonText1}>GUTS Bus</Text>
-                </TouchableOpacity>
-                {/* <BlurView intensity={100} style={[StyleSheet.absoluteFill, styles.nonBlurredContent]}>
-          <Text style={{fontSize:'25'}}>Hello! I am bluring contents underneath</Text>
-        </BlurView> */}
-                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}
-                onPress={()=> {
-                    setFlexDollarsModalVisible(true);
-                }}>
-                    <Text style={HomeStyles.ButtonText1}>Check Flex Dollars</Text>
-                </TouchableOpacity>
-
                 <Modal  
-                animationType="slide" transparent={true} visible={flexDollarsModalVisible}>
-                <BlurView tint='dark' intensity={100} style={StyleSheet.absoluteFill}>
+                // animationType="slide" transparent={true} visible={flexDollarsModalVisible}
+                animationType = "slide"
+                    transparent = {true}
+                    //backgroundOpacity = {0.5}
+                    hasBackdrop = {true}
+                    backdropOpacity={0.7}
+                    backdropColor="black"
+                    isVisible = {flexDollarsModalVisible}
+                    onBackdropPress={() => setAccessCardModal(!flexDollarsModalVisible)}>
+                
+                {/* <BlurView tint='dark' intensity={100} style={StyleSheet.absoluteFill}> */}
 
                     <View style={FlexDollarsStyles.modal}>
                         <TouchableOpacity                
@@ -122,8 +113,28 @@ const Home = ({navigation}) => {
                             </View>
                         </View>
                     </View> 
-                    </BlurView>
+                    {/* </BlurView> */}
                 </Modal>
+
+                <View style= {{marginVertical: height * .01}}>
+
+                </View>
+                <StatusBar style="auto" />
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1} 
+                onPress={()=> navigation.push("GUTS")}>
+                    <Text style={HomeStyles.ButtonText1}>GUTS Bus</Text>
+                </TouchableOpacity>
+                {/* <BlurView intensity={100} style={[StyleSheet.absoluteFill, styles.nonBlurredContent]}>
+          <Text style={{fontSize:'25'}}>Hello! I am bluring contents underneath</Text>
+        </BlurView> */}
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}
+                onPress={()=> {
+                    setFlexDollarsModalVisible(true);
+                }}>
+                    <Text style={HomeStyles.ButtonText1}>Check Flex Dollars</Text>
+                </TouchableOpacity>
+
+                
                 {/* <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}> */}
 
                 
