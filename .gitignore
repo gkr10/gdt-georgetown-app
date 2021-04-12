@@ -1,7 +1,5 @@
 node_modules/
-.expo
 .vscode
 package-lock.json
 yarn.lock
-package.json
 babel.config.js
