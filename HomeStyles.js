@@ -54,7 +54,7 @@ const HomeStyles = StyleSheet.create({
         //elevation: 8,
         borderRadius: 20,
         width: width * .9,
-        height: height * .34,
+        height: '45%',
         //marginLeft: '5%',
         //shadowOffset: {width:4, height: 4},
         //shadowOpacity: .25,

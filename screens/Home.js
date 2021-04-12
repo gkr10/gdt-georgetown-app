@@ -16,7 +16,7 @@ const Home = ({navigation}) => {
         var year = new Date().getFullYear();
 
         return date + '/' + month + '/' + year;//format: dd-mm-yyyy;
-  }
+    }
     return (
         <SafeAreaView>
             <View style={styles.container}>
