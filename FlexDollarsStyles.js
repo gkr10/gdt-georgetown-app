@@ -26,7 +26,7 @@ const FlexDollarsStyles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 25,
         textAlign: 'center',
-        marginBottom: '3%'
+        //marginBottom: '3%'
     },
     dollarsBox: {
         borderWidth: 1, 
@@ -39,10 +39,10 @@ const FlexDollarsStyles = StyleSheet.create({
     buttonBox: {
         backgroundColor: '#041E42', 
         borderRadius: 10, 
-        marginBottom: '15%', 
-        marginTop: '10%', 
+        marginBottom: '10%', 
+        marginTop: '8%', 
         width: '35%', 
-        height: '45%' 
+        height: '50%' 
     },
     buttonText: {
         color: '#fff', 

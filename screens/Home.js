@@ -71,7 +71,7 @@ const Home = ({navigation}) => {
                             {/* <Text style={GUTSStyles.hideButton}>Hide</Text> */}
                             <AntDesign name="arrowleft" size={24} color="black" style={{marginLeft: '7%', marginTop: '5%'}} />
                         </TouchableOpacity> 
-                        <Text style={GUTSStyles.dupontTimes}>Flex Dollars</Text>
+                        <Text style={FlexDollarsStyles.dupontTimes}>Flex Dollars</Text>
                         
                             {/* <Image source={creditCard} style={{width: 180, height: 40, resizeMode: "contain"}}/> */}
                         <View style = {FlexDollarsStyles.dollarsBox}>
@@ -97,7 +97,7 @@ const Home = ({navigation}) => {
                                WebBrowser.openBrowserAsync('https://eacct-georgetown-sp.transactcampus.com/GOCard/');
                             }}
                             >
-                                <Text style={FlexDollarsStyles.buttonText}>Add Money</Text>
+                                <Text style={FlexDollarsStyles.buttonText}>Add {'\n'} Money</Text>
                             </TouchableOpacity>
                                 
                             </View>
