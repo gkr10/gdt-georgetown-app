@@ -8,6 +8,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import Home from '../screens/Home';
 import GUTS from '../screens/GUTS';
+import Dining from '../screens/Dining';
 
 const {width, height} = Dimensions.get('window');
 
@@ -47,6 +48,23 @@ const StackNavigatorMain = () =>(
                 <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
             ),
             
+        })}/>
+
+        <Stack.Screen
+            name="Dining" 
+            component={Dining} 
+            options={({navigation}) => ({
+                headerStyle: {
+                    backgroundColor: '#C4C4C4',
+                    height: height * .15,
+                },
+                headerRight: () => (
+                    <MaterialCommunityIcons name="bell-ring" size={33} color="white" style={{marginHorizontal: 30}}/>
+                ),
+                headerTitle: () => (
+                    <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
+                ),
+                
         })}/>
         
     </Stack.Navigator>

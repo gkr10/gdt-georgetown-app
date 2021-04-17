@@ -143,7 +143,8 @@ const Home = ({navigation}) => {
                     <Text style={HomeStyles.ButtonText1}>Building Access Card</Text>
                 </TouchableOpacity>
                 
-                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}>
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}
+                onPress={()=> navigation.push("Dining")}>
                     <Text style={HomeStyles.ButtonText1}>Dining Options</Text>
                 </TouchableOpacity>
                 <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
