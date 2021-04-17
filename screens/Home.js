@@ -10,7 +10,7 @@ import HomeStyles from '../styles/HomeStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 import GUTSStyles from '../styles/GUTSStyles';
 // import creditCard from '../assets/credit-card-black-png-0.png';
-import FlexDollarsStyles from '../FlexDollarsStyles';
+import FlexDollarsStyles from '../styles/FlexDollarsStyles';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { AntDesign } from '@expo/vector-icons'; 
 import { BlurView } from 'expo-blur';
