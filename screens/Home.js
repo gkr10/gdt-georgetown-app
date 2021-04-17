@@ -155,6 +155,11 @@ const Home = ({navigation, route}) => {
                     <Text style={HomeStyles.ButtonText1}>GU Farmer's Market</Text>
                 </TouchableOpacity>
 
+                <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('Announcement')} style={HomeStyles.ButtonContainer2}>
+                    <Text style={HomeStyles.ButtonText1}>Announcements</Text>
+                </TouchableOpacity>
+
+
                 <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('LogIn')} style={HomeStyles.ButtonContainer3}>
                     <Text style={HomeStyles.ButtonText1}>Profile</Text>
                 </TouchableOpacity>
