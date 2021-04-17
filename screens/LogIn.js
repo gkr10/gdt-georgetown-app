@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {StyleSheet, View, Text, TextInput, Dimensions, SafeAreaView, TouchableOpacity, Modal, Button, Alert, Linking} from 'react-native';
+import {StyleSheet, TouchableWithoutFeedback, Keyboard, Text, TextInput, Dimensions, SafeAreaView, TouchableOpacity, Modal, Button, Alert, Linking, KeyboardAvoidingView} from 'react-native';
 
 import { StatusBar } from 'expo-status-bar';
 import HomeStyles from '../styles/HomeStyles';
@@ -28,58 +28,63 @@ const LogIn = ({navigation}) =>{
     }
 
     return (
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <SafeAreaView style={styles.area}>
-    <Text style={styles.title}>Profile</Text>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeNetId}
-        value={netId}
-        placeholder="NetID"
-        keyboardType="email-address"
-        autoCorrect={false}
-        autoCompleteType="off"
-        autoCapitalize='none'
-        maxLength={40}
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeGoCardNumber}
-        value={goCardNumber}
-        placeholder="GoCard Number"
-        keyboardType="numeric"
-        autoCorrect={false}
-        autoCompleteType="off"
-        autoCapitalize='none'
-        maxLength={40}
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeFirstName}
-        value={firstName}
-        placeholder="First Name"
-        keyboardType="default"
-        maxLength={100}
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeLastName}
-        value={lastName}
-        placeholder="Last Name"
-        keyboardType="default"
-        maxLength={100}
-      />
-      <Button
-        title="Save"
-        color="#041E42"
-        onPress={validate}
-      />
-      <Button
-        title="Help"
-        color="#041E42"
-        onPress={() => openURL(LOGIN_HELP_URL)}
-      />
+          <KeyboardAvoidingView
+                behavior={Platform.OS === "ios" ? "padding" : "height"}
+            ></KeyboardAvoidingView>
+          <Text style={styles.title}>Profile</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeNetId}
+            value={netId}
+            placeholder="NetID"
+            keyboardType="email-address"
+            autoCorrect={false}
+            autoCompleteType="off"
+            autoCapitalize='none'
+            maxLength={40}
+          />
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeGoCardNumber}
+            value={goCardNumber}
+            placeholder="GoCard Number"
+            keyboardType="numeric"
+            autoCorrect={false}
+            autoCompleteType="off"
+            autoCapitalize='none'
+            maxLength={40}
+          />
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeFirstName}
+            value={firstName}
+            placeholder="First Name"
+            keyboardType="default"
+            maxLength={100}
+          />
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeLastName}
+            value={lastName}
+            placeholder="Last Name"
+            keyboardType="default"
+            maxLength={100}
+          />
+          <Button
+            title="Save"
+            color="#041E42"
+            onPress={validate}
+          />
+          <Button
+            title="Help"
+            color="#041E42"
+            onPress={() => openURL(LOGIN_HELP_URL)}
+          />
       
-    </SafeAreaView>
+        </SafeAreaView>
+        </TouchableWithoutFeedback>
     )
 }
 
@@ -93,7 +98,7 @@ const styles = StyleSheet.create({
   },
   area:{
     alignItems: 'center',
-    top: '25%'
+    top: '10%'
   },
     title: {
       fontSize: 30,
