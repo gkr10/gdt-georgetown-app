@@ -16,7 +16,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
 import * as WebBrowser from 'expo-web-browser';
 
-const Home = ({navigation}) => {
+const Home = ({navigation, route}) => {
     const {width, height} = Dimensions.get('window');
 
     const [flexDollarsModalVisible, setFlexDollarsModalVisible] = useState(false);
