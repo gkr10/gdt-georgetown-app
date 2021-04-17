@@ -39,11 +39,7 @@ export default function App() {
         <StackNavigator />
       )
     }
-    
 
-      
-    
-  
 }
 
 const styles = StyleSheet.create({
