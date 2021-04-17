@@ -2114,7 +2114,7 @@ babel-plugin-module-resolver@^3.2.0:
 
 babel-plugin-module-resolver@^4.1.0:
   version "4.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-4.1.0.tgz#22a4f32f7441727ec1fbf4967b863e1e3e9f33e2"
+  resolved "https://registry.npmjs.org/babel-plugin-module-resolver/-/babel-plugin-module-resolver-4.1.0.tgz"
   integrity sha512-MlX10UDheRr3lb3P0WcaIdtCSRlxdQsB1sBqL7W0raF070bGl1HQQq5K3T2vf2XAYie+ww+5AKC/WrkjRO2knA==
   dependencies:
     find-babel-config "^1.2.0"
@@ -2587,7 +2587,7 @@ commondir@^1.0.1:
 
 compare-urls@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/compare-urls/-/compare-urls-2.0.0.tgz#9b378c4abd43980a8700fffec9afb85de4df9075"
+  resolved "https://registry.npmjs.org/compare-urls/-/compare-urls-2.0.0.tgz"
   integrity sha512-eCJcWn2OYFEIqbm70ta7LQowJOOZZqq1a2YbbFCFI1uwSvj+TWMwXVn7vPR1ceFNcAIt5RSTDbwdlX82gYLTkA==
   dependencies:
     normalize-url "^2.0.1"
@@ -3171,7 +3171,7 @@ expo-status-bar@~1.0.3:
 
 expo-web-browser@^9.1.0:
   version "9.1.0"
-  resolved "https://registry.yarnpkg.com/expo-web-browser/-/expo-web-browser-9.1.0.tgz#4951213f3b57a206dfc5f3f7b2fd1b73863a33af"
+  resolved "https://registry.npmjs.org/expo-web-browser/-/expo-web-browser-9.1.0.tgz"
   integrity sha512-1UkOHWUBshY7n/R9xc4Q0LN0Dxqdvvotlp8sCM/6bUB/aE+9B+duoimKtUhlnzcvfAFWgF5y5x+bIf7j6PF7ig==
   dependencies:
     compare-urls "^2.0.0"
@@ -3935,7 +3935,7 @@ is-obj@^1.0.0:
 
 is-plain-obj@^1.0.0:
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
+  resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-1.1.0.tgz"
   integrity sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
 
 is-plain-object@^2.0.3, is-plain-object@^2.0.4:
@@ -4883,7 +4883,7 @@ normalize-path@^2.1.1:
 
 normalize-url@^2.0.1:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-2.0.1.tgz#835a9da1551fa26f70e92329069a23aa6574d7e6"
+  resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-2.0.1.tgz"
   integrity sha512-D6MUW4K/VzoJ4rJ01JFKxDrtY1v9wrgzCX5f2qj/lzH1m/lW6MhUZFKerVsnyjOhOsYzI9Kqqak+10l4LvLpMw==
   dependencies:
     prepend-http "^2.0.0"
@@ -5215,7 +5215,7 @@ pkg-up@^2.0.0:
 
 pkg-up@^3.1.0:
   version "3.1.0"
-  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.1.0.tgz#100ec235cc150e4fd42519412596a28512a0def5"
+  resolved "https://registry.npmjs.org/pkg-up/-/pkg-up-3.1.0.tgz"
   integrity sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
   dependencies:
     find-up "^3.0.0"
@@ -5262,7 +5262,7 @@ pouchdb-collections@^1.0.1:
 
 prepend-http@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
+  resolved "https://registry.npmjs.org/prepend-http/-/prepend-http-2.0.0.tgz"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
 pretty-format@^24.9.0:
@@ -5350,7 +5350,7 @@ qs@^6.5.0:
 
 query-string@^5.0.1:
   version "5.1.1"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-5.1.1.tgz#a78c012b71c17e05f2e3fa2319dd330682efb3cb"
+  resolved "https://registry.npmjs.org/query-string/-/query-string-5.1.1.tgz"
   integrity sha512-gjWOsm2SoGlgLEdAGt7a6slVOk9mGiXmPFMqrEhLQ68rhQuBnpfs3+EmlvqKyxnCo9/PPlF+9MtY02S1aFg+Jw==
   dependencies:
     decode-uri-component "^0.2.0"
@@ -5443,7 +5443,7 @@ react-native-safe-area-context@3.1.9:
 
 react-native-screens@^3.1.1:
   version "3.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-3.1.1.tgz#2cd4496c5e3ed1ffbaf77962b8fcc10be3af2158"
+  resolved "https://registry.npmjs.org/react-native-screens/-/react-native-screens-3.1.1.tgz"
   integrity sha512-cjhK85T8LQ7uqqmwvLb8FKNk1RfgJd1jtbUm1lOxUmJreFki5Wh2SUlx0DAvNG35U6quGD15KPYRducGa+M04g==
 
 react-native-web@~0.13.12:
@@ -5632,7 +5632,7 @@ reselect@^3.0.1:
 
 reselect@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.0.0.tgz#f2529830e5d3d0e021408b246a206ef4ea4437f7"
+  resolved "https://registry.npmjs.org/reselect/-/reselect-4.0.0.tgz"
   integrity sha512-qUgANli03jjAyGlnbYVAV5vvnOmJnODyABz51RdBN7M4WaVu8mecZWgyQNkG8Yqe3KRGRt0l4K4B3XVEULC4CA==
 
 resolve-from@^3.0.0:
@@ -5937,7 +5937,7 @@ snapdragon@^0.8.1:
 
 sort-keys@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-2.0.0.tgz#658535584861ec97d730d6cf41822e1f56684128"
+  resolved "https://registry.npmjs.org/sort-keys/-/sort-keys-2.0.0.tgz"
   integrity sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
   dependencies:
     is-plain-obj "^1.0.0"
@@ -6037,7 +6037,7 @@ stream-buffers@~2.2.0:
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"
-  resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+  resolved "https://registry.npmjs.org/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz"
   integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
 
 strict-uri-encode@^2.0.0:
