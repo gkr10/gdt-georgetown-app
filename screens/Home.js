@@ -5,9 +5,8 @@ import { StatusBar } from 'expo-status-bar';
 import HomeStyles from '../styles/HomeStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
-
-const Home = ({navigation}) => {
+const Home = ({navigation, route}) => {
+    
     const {width, height} = Dimensions.get('window');
     const [accessCardModal, setAccessCardModal] = useState(false);
 
@@ -17,7 +16,9 @@ const Home = ({navigation}) => {
         var year = new Date().getFullYear();
 
         return date + '/' + month + '/' + year;//format: dd-mm-yyyy;
-  }
+    }
+
+    
     return (
         <ScrollView>
             <View style={styles.container}>
@@ -32,10 +33,10 @@ const Home = ({navigation}) => {
                     onBackdropPress={() => setAccessCardModal(!accessCardModal)}>
                     <View style = {HomeStyles.modalView}>
                         <Text style = {HomeStyles.modalTextTitle}>GoCard Information</Text>
-                        <Text style = {HomeStyles.modalText}>First Name:</Text>
-                        <Text style = {HomeStyles.modalText}>Last Name:</Text>
+                        <Text style = {HomeStyles.modalText}>First Name: {route.params?.firstName}</Text>
+                        <Text style = {HomeStyles.modalText}>Last Name: {route.params?.lastName}</Text>
                         <Text style = {HomeStyles.modalText}>Today's Date: {getCurrentDate()}</Text>
-                        <Text style = {HomeStyles.modalText}>GoCard Number:</Text>
+                        <Text style = {HomeStyles.modalText}>GoCard Number: {route.params?.goCardNumber}</Text>
                     </View>
                 </Modal>
                 <View style= {{marginVertical: height * .01}}>
@@ -61,7 +62,7 @@ const Home = ({navigation}) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('LogIn')} style={HomeStyles.ButtonContainer3}>
-                    <Text style={HomeStyles.ButtonText1}>Log In</Text>
+                    <Text style={HomeStyles.ButtonText1}>Profile</Text>
                 </TouchableOpacity>
                 
             </View>
