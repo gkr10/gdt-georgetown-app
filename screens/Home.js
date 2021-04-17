@@ -30,11 +30,9 @@ const Home = ({navigation, route}) => {
         return date + '/' + month + '/' + year;//format: dd-mm-yyyy;
     }
 
-
     
     return (
         <ScrollView>
-
             <View style={styles.container}>
                 <Modal
                     animationType = "slide"
@@ -151,7 +149,9 @@ const Home = ({navigation, route}) => {
                 <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer2}>
                     <Text style={HomeStyles.ButtonText1}>Dining Options</Text>
                 </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
+                
+                <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}
+                onPress={()=> navigation.push("LandingScreen")}>
                     <Text style={HomeStyles.ButtonText1}>GU Farmer's Market</Text>
                 </TouchableOpacity>
 

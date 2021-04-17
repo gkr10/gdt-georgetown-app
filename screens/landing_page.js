@@ -3,86 +3,28 @@ import { Button, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'rea
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-function TodaysVendorsScreen() {
+
+const LandingScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.parent}>
-      <View style={styles.hview}>
-        <Text style={styles.tview}>Today's Vendors</Text>
-      </View>
-    </ScrollView>
-  )
-}
-
-function PopUpScreen() {
-  return (
-    <ScrollView style={styles.parent}>
-      <View style={styles.hview}>
-        <Text style={styles.tview}>Pop-Up (Seasonal)</Text>
-      </View>
-    </ScrollView>
-  )
-}
-
-function CommunityVendorsScreen() {
-  return (
-    <ScrollView style={styles.parent}>
-      <View style={styles.hview}>
-        <Text style={styles.tview}>Community Vendors</Text>
-      </View>
-    </ScrollView>
-  )
-}
-
-function AllVendorsScreen() {
-  return (
-    <ScrollView style={styles.parent}>
-      <View style={styles.hview}>
-        <Text style={styles.tview}>All Vendors</Text>
-      </View>
-    </ScrollView>
-  )
-}
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Landing"
-        onPress={() => navigation.navigate('Landing')}
-      />
-    </View>
-  );
-}
-
-function LandingScreen({ navigation }) {
-  return (
-    <ScrollView style={styles.parent}>
-      <View style={styles.hview}>
-        <Text style={styles.tview}>Georgetown University{"\n"}Farmer's Market</Text>
-      </View>
 
       <View style={styles.twobuttons}>
         <TouchableOpacity
-          style={styles.gridbutton}
-          onPress={() => navigation.push('TodaysVendors')}>
+          style={styles.gridbutton}>
           <Text style={styles.buttontext}>Today's Vendors</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.gridbutton}
-          onPress={() => navigation.push('PopUp')}>
+          style={styles.gridbutton}>
           <Text style={styles.buttontext}>Pop-Up (Seasonal)</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.twobuttons}>
         <TouchableOpacity
-          style={styles.gridbutton}
-          onPress={() => navigation.push('CommunityVendors')}>
+          style={styles.gridbutton}>
           <Text style={styles.buttontext}>Community Vendors</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.gridbutton}
-          onPress={() => navigation.push('AllVendors')}>
+          style={styles.gridbutton}>
           <Text style={styles.buttontext}>All Vendors</Text>
         </TouchableOpacity>
       </View>
@@ -94,24 +36,7 @@ function LandingScreen({ navigation }) {
   );
 }
 
-const Stack = createStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Landing" component={LandingScreen}/>
-        <Stack.Screen name="TodaysVendors" component={TodaysVendorsScreen}/>
-        <Stack.Screen name="PopUp" component={PopUpScreen}/>
-        <Stack.Screen name="CommunityVendors" component={CommunityVendorsScreen}/>
-        <Stack.Screen name="AllVendors" component={AllVendorsScreen}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
-export default App;
+export default LandingScreen;
 
 const styles = StyleSheet.create({
   todaylayout: {
