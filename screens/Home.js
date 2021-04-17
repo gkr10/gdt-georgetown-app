@@ -1,23 +1,22 @@
-
 import React, { useState } from 'react';
-import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity, Button} from 'react-native';
+import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity, Button, ScrollView} from 'react-native';
 // import React, { useState, useEffect } from 'react';
 // import {StyleSheet, View, Text, Dimensions, SafeAreaView, TouchableOpacity} from 'react-native';
 import moment from 'moment';
 import Modal from 'react-native-modal';
 
 import { StatusBar } from 'expo-status-bar';
-import HomeStyles from '../HomeStyles';
+import HomeStyles from '../styles/HomeStyles';
 import { LinearGradient } from 'expo-linear-gradient';
-import GUTSStyles from '../GUTSStyles';
+import GUTSStyles from '../styles/GUTSStyles';
 // import creditCard from '../assets/credit-card-black-png-0.png';
-import FlexDollarsStyles from '../FlexDollarsStyles';
+import FlexDollarsStyles from '../styles/FlexDollarsStyles';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 import { AntDesign } from '@expo/vector-icons'; 
 import { BlurView } from 'expo-blur';
 import * as WebBrowser from 'expo-web-browser';
 
-const Home = ({navigation}) => {
+const Home = ({navigation, route}) => {
     const {width, height} = Dimensions.get('window');
 
     const [flexDollarsModalVisible, setFlexDollarsModalVisible] = useState(false);
@@ -30,8 +29,12 @@ const Home = ({navigation}) => {
 
         return date + '/' + month + '/' + year;//format: dd-mm-yyyy;
     }
+
+
+    
     return (
-        <SafeAreaView>
+        <ScrollView>
+
             <View style={styles.container}>
                 <Modal
                     animationType = "slide"
@@ -44,10 +47,11 @@ const Home = ({navigation}) => {
                     onBackdropPress={() => setAccessCardModal(!accessCardModal)}>
                     <View style = {HomeStyles.modalView}>
                         <Text style = {HomeStyles.modalTextTitle}>GoCard Information</Text>
-                        <Text style = {HomeStyles.modalText}>First Name:</Text>
-                        <Text style = {HomeStyles.modalText}>Last Name:</Text>
+
+                        <Text style = {HomeStyles.modalText}>First Name: {route.params?.firstName}</Text>
+                        <Text style = {HomeStyles.modalText}>Last Name: {route.params?.lastName}</Text>
                         <Text style = {HomeStyles.modalText}>Today's Date: {getCurrentDate()}</Text>
-                        <Text style = {HomeStyles.modalText}>GoCard Number:</Text>
+                        <Text style = {HomeStyles.modalText}>GoCard Number: {route.params?.goCardNumber}</Text>
                     </View>
                 </Modal>
                 <Modal  
@@ -120,6 +124,7 @@ const Home = ({navigation}) => {
 
                 </View>
                 <StatusBar style="auto" />
+
                 <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1} 
                 onPress={()=> navigation.push("GUTS")}>
                     <Text style={HomeStyles.ButtonText1}>GUTS Bus</Text>
@@ -150,10 +155,14 @@ const Home = ({navigation}) => {
                 <TouchableOpacity activeOpacity={0.8} style={HomeStyles.ButtonContainer1}>
                     <Text style={HomeStyles.ButtonText1}>GU Farmer's Market</Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('LogIn')} style={HomeStyles.ButtonContainer3}>
+                    <Text style={HomeStyles.ButtonText1}>Profile</Text>
+                </TouchableOpacity>
                 
             </View>
-            {/* </BlurView> */}
-        </SafeAreaView>
+        </ScrollView>
+
         
     );
 }
