@@ -10,6 +10,7 @@ import Home from '../screens/Home';
 import LogIn from '../screens/LogIn';
 import GUTS from '../screens/GUTS';
 import LandingScreen from '../screens/landing_page';
+import AllVendors from '../screens/AllVendors';
 
 const {width, height} = Dimensions.get('window');
 
@@ -65,6 +66,21 @@ const StackNavigatorMain = () =>(
         <Stack.Screen
         name="LandingScreen" 
         component={LandingScreen} 
+        options={({navigation}) => ({
+            headerStyle: {
+                backgroundColor: '#C4C4C4',
+                height: height * .15,
+            },
+            headerRight: () => (
+                <MaterialCommunityIcons name="bell-ring" size={33} color="white" style={{marginHorizontal: 30}}/>
+            ),
+            headerTitle: () => (
+                <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
+            ),
+        })}/>
+        <Stack.Screen
+        name="AllVendors" 
+        component={AllVendors} 
         options={({navigation}) => ({
             headerStyle: {
                 backgroundColor: '#C4C4C4',

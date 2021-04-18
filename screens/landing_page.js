@@ -3,7 +3,6 @@ import { Button, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'rea
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-
 const LandingScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.parent}>
@@ -12,6 +11,7 @@ const LandingScreen = ({navigation}) => {
         <TouchableOpacity
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>Today's Vendors</Text>
+            
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.gridbutton}>
@@ -26,6 +26,7 @@ const LandingScreen = ({navigation}) => {
         <TouchableOpacity
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>All Vendors</Text>
+          onPress={()=> navigation.push("AllVendors")}
         </TouchableOpacity>
       </View>
       <TouchableOpacity
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     width: 190,
     borderRadius: 35,
     alignItems: 'center',
-    marginHorizontal: 10,
+    marginHorizontal: 25,
     justifyContent: 'space-evenly',
     backgroundColor: '#725B45',
   },
