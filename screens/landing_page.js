@@ -9,16 +9,19 @@ const LandingScreen = ({navigation}) => {
 
       <View style={styles.column}>
         <TouchableOpacity
+          onPress={()=> navigation.push("TodayVendors")}
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>Today's Vendors</Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={()=> navigation.push("PopUpVendors")}
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>Pop-Up (Seasonal)</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.column}>
         <TouchableOpacity
+          onPress={()=> navigation.push("CommunityVendors")}
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>Community Vendors</Text>
         </TouchableOpacity>
@@ -43,8 +46,8 @@ const styles = StyleSheet.create({
     marginTop: 50,
     alignSelf: 'center',
     height: 250,
-    width: 400,
-    borderRadius: 35,
+    width: 450,
+    borderRadius: 15,
     alignItems: 'center',
     paddingTop: 25,
     backgroundColor: '#725B45',
@@ -57,10 +60,9 @@ const styles = StyleSheet.create({
     marginTop: 50,
     alignSelf: 'center',
     height: 140,
-    width: 190,
+    width: 220,
     borderRadius: 35,
     alignItems: 'center',
-    marginHorizontal: 25,
     justifyContent: 'space-evenly',
     backgroundColor: '#725B45',
   },

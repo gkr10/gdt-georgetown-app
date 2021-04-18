@@ -11,6 +11,9 @@ import LogIn from '../screens/LogIn';
 import GUTS from '../screens/GUTS';
 import LandingScreen from '../screens/landing_page';
 import AllVendors from '../screens/AllVendors';
+import TodayVendors from '../screens/TodayVendors';
+import PopUpVendors from '../screens/PopUpVendors';
+import CommunityVendors from '../screens/CommunityVendors';
 
 const {width, height} = Dimensions.get('window');
 
@@ -88,6 +91,42 @@ const StackNavigatorMain = () =>(
                 
             },
             headerTitle: "All Vendors",
+            headerTintColor: '#fff',
+        })}/>
+        <Stack.Screen
+        name="TodayVendors" 
+        component={TodayVendors} 
+        options={({navigation}) => ({
+            headerStyle: {
+                backgroundColor: '#45413b',
+                height: height * .1,
+                
+            },
+            headerTitle: "Today's Vendors",
+            headerTintColor: '#fff',
+        })}/>
+        <Stack.Screen
+        name="PopUpVendors" 
+        component={PopUpVendors} 
+        options={({navigation}) => ({
+            headerStyle: {
+                backgroundColor: '#45413b',
+                height: height * .1,
+                
+            },
+            headerTitle: "Pop-Up Vendors (Seasonal)",
+            headerTintColor: '#fff',
+        })}/>
+        <Stack.Screen
+        name="CommunityVendors" 
+        component={CommunityVendors} 
+        options={({navigation}) => ({
+            headerStyle: {
+                backgroundColor: '#45413b',
+                height: height * .1,
+                
+            },
+            headerTitle: "Georgetown Community Vendors",
             headerTintColor: '#fff',
         })}/>
     </Stack.Navigator>
