@@ -64,7 +64,7 @@ const StackNavigatorMain = () =>(
             ),
         })}/>
         <Stack.Screen
-        name="LandingScreen" 
+        name="LandingScreen"
         component={LandingScreen} 
         options={({navigation}) => ({
             headerStyle: {
@@ -83,15 +83,12 @@ const StackNavigatorMain = () =>(
         component={AllVendors} 
         options={({navigation}) => ({
             headerStyle: {
-                backgroundColor: '#C4C4C4',
-                height: height * .15,
+                backgroundColor: '#45413b',
+                height: height * .1,
+                
             },
-            headerRight: () => (
-                <MaterialCommunityIcons name="bell-ring" size={33} color="white" style={{marginHorizontal: 30}}/>
-            ),
-            headerTitle: () => (
-                <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
-            ),
+            headerTitle: "All Vendors",
+            headerTintColor: '#fff',
         })}/>
     </Stack.Navigator>
 );

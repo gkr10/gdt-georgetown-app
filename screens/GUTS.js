@@ -121,7 +121,6 @@ const GUTS = ({navigation}) => {
                             <View>
                                 <TouchableOpacity title="..."  onPress={()=> {
                                     setRosslynModalVisible(true);
-                                    
                                 }}>
                                 
                                     <Text style={GUTSStyles.openModal}>...</Text>
@@ -166,11 +165,8 @@ const GUTS = ({navigation}) => {
                                 </Modal>
                             </View>
                         </View>
-
                         {/* <Text style={GUTSStyles.vector}></Text> */}
                         {/* <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} /> */}
-        
-                        
                         <View style={{flexDirection: 'row',}}>
                             <View style= {GUTSStyles.Rectangle1}/> 
                             <View> 
@@ -186,9 +182,7 @@ const GUTS = ({navigation}) => {
                                 <Text style={GUTSStyles.DepatureSmallText}>19th Street and North Moore Street {'\n'}5:00AM</Text>
                             </View>
                         </View>
-                        
                     </View>
-
                 </View>
             </ScrollView>
         </SafeAreaView>

@@ -7,26 +7,25 @@ const LandingScreen = ({navigation}) => {
   return (
     <ScrollView style={styles.parent}>
 
-      <View style={styles.twobuttons}>
+      <View style={styles.column}>
         <TouchableOpacity
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>Today's Vendors</Text>
-            
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>Pop-Up (Seasonal)</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.twobuttons}>
+      <View style={styles.column}>
         <TouchableOpacity
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>Community Vendors</Text>
         </TouchableOpacity>
         <TouchableOpacity
+          onPress={()=> navigation.push("AllVendors")}
           style={styles.gridbutton}>
           <Text style={styles.buttontext}>All Vendors</Text>
-          onPress={()=> navigation.push("AllVendors")}
         </TouchableOpacity>
       </View>
       <TouchableOpacity
@@ -50,9 +49,9 @@ const styles = StyleSheet.create({
     paddingTop: 25,
     backgroundColor: '#725B45',
   },
-  twobuttons: {
+  column: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
   },
   gridbutton: {
     marginTop: 50,
