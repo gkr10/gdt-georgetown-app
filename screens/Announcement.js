@@ -1,7 +1,6 @@
 import { localeData, min } from "moment";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View, ActivityIndicator, Dimensions, Image } from "react-native";
-import { Divider } from 'react-native-elements';
+import { StyleSheet, Text, View, ActivityIndicator, Dimensions, Image, Button, Modal, TouchableWithoutFeedback, ScrollView } from "react-native";
 import * as Progress from 'react-native-progress';
 import SwipeCards from "react-native-swipe-cards-deck";
 import jack from '../assets/bulldog.png';
@@ -10,37 +9,9 @@ const { width, height } = Dimensions.get('window');
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 const EXAMPLE_MESSAGE = 'April 14, 2021\n \nDear Members of the Georgetown University Community: \n \nAs I shared in my message on March 25, we anticipate that the conditions will be in place this fall to bring our community back and resume more regular life on our campuses. Our gradual return is beginning this summer, with a full return of our community for the fall.';
 
-function Card({ data }) {
-    return (
-        <View style={[styles.card, { backgroundColor: data.backgroundColor }]}>
-            <Text style={styles.cardsTitle}>{data.title}</Text>
-            <Image source={logo} style={{ width: 200, height: 200, resizeMode: "contain" }} />
-            <Text style={styles.cardsContent}>{data.content}</Text>
-            <Text style={styles.readMore}>Read more</Text>
-
-        </View>
-    );
-}
-
-function StatusCard({ title, content }) {
-    return (
-        <View>
-            <Text style={styles.cardsTitle}>{title}</Text>
-            <Text style={styles.cardsContent}>{content}</Text>
-
-        </View>
-    );
-}
-
-function BaseCard({ title }) {
-    return (
-        <View>
-            <Text style={styles.baseText}>{title}</Text>
-        </View>
-    );
-}
 
 const Announcement = ({ navigation }) => {
+    const [expand, setExpand] = useState(false);
     const [cards, setCards] = useState();
     const [progress, setProgress] = useState(1 / 6);
     // replace with real remote data fetching
@@ -50,14 +21,14 @@ const Announcement = ({ navigation }) => {
     function load() {
         setTimeout(() => {
             setCards([
-                { title: "Annoucement #1", backgroundColor: "#041E42", content: EXAMPLE_MESSAGE },
-                { title: "Annoucement #2", backgroundColor: "#041E42", content: lorem },
-                { title: "Annoucement #3", backgroundColor: "#041E42", content: lorem },
-                { title: "Annoucement #4", backgroundColor: "#041E42", content: lorem },
-                { title: "Annoucement #5", backgroundColor: "#041E42", content: lorem },
-                { title: "Annoucement #6", backgroundColor: "#041E42", content: lorem },
+                { index: 1, title: "Annoucement #1", backgroundColor: "#041E42", content: EXAMPLE_MESSAGE },
+                { index: 2, title: "Annoucement #2", backgroundColor: "#041E42", content: lorem },
+                { index: 3, title: "Annoucement #3", backgroundColor: "#041E42", content: lorem },
+                { index: 4, title: "Annoucement #4", backgroundColor: "#041E42", content: lorem },
+                { index: 5, title: "Annoucement #5", backgroundColor: "#041E42", content: lorem },
+                { index: 6, title: "Annoucement #6", backgroundColor: "#041E42", content: lorem },
             ]);
-        }, 3000);
+        }, 1000);
     }
     function handleYup(card) {
         return true; // return false if you wish to cancel the action
@@ -80,13 +51,60 @@ const Announcement = ({ navigation }) => {
         )
     }
 
+
+    function Card({ data }) {
+        console.log(data.index)
+        return (
+            <View style={[styles.card, { backgroundColor: data.backgroundColor }]}>
+                <Text style={styles.cardsTitle}>{data.title}</Text>
+                <Image source={logo} style={{ width: 200, height: 200, resizeMode: "contain" }} />
+                <Text style={styles.cardsContent}>{data.content}</Text>
+                <Button title="Read More" style={styles.readMore} onPress={() => setExpand(true)} />
+
+                <Modal style={styles.modalView}
+                    animationType="slide"
+                    presentationStyle="formSheet"
+                    visible={expand}
+
+                >
+
+                    <View style={styles.modalView}>
+                        <Button title="Close" onPress={() => setExpand(!expand)}>
+                        </Button>
+                        <ScrollView>
+                            <View style={styles.modalContent}>
+                                <Text style={styles.cardsTitle}>{data.title} Detail</Text>
+                                <Text style={styles.cardsContent}>{lorem}{"\n"}</Text>
+                                <Text style={styles.cardsContent}>{lorem}{"\n"}</Text>
+                                <Text style={styles.cardsContent}>{lorem}{"\n"}</Text>
+                            </View>
+                        </ScrollView>
+                    </View>
+
+
+                </Modal>
+
+            </View>
+        );
+    }
+
+
+    function BaseCard({ title }) {
+        return (
+            <View>
+                <Text style={styles.baseText}>{title}</Text>
+            </View>
+        );
+    }
+
+
     return (
         <View style={styles.container}>
             {cards ? (
                 <SwipeCards
                     cards={cards}
                     renderCard={(cardData) => <Card data={cardData} />}
-                    keyExtractor={(cardData) => String(cardData.title)}
+                    keyExtractor={(cardData) => String(cardData.index)}
                     loop={false}
                     renderNoMoreCards={endOfCards}
                     handleYup={handleYup}
@@ -96,10 +114,11 @@ const Announcement = ({ navigation }) => {
                     showYup={false}
                     showMaybe={false}
                     showNope={false}
+                    smoothtransition={true}
 
                     // If you want a stack of cards instead of one-per-one view, activate stack mode
                     stack={true}
-                    stackDepth={3}
+                    stackDepth={2}
                     cardRemoved={incrementProgress}
                 />
             ) : (
@@ -135,7 +154,8 @@ const styles = StyleSheet.create({
     cardsTitle: {
         fontSize: 30,
         fontFamily: 'SourceSansPro-SemiBold',
-        color: 'white'
+        color: 'white',
+        marginBottom: 10
     },
     cardsContent: {
         fontSize: 20,
@@ -157,6 +177,20 @@ const styles = StyleSheet.create({
         fontFamily: 'SourceSansPro-SemiBold',
         color: 'white'
     },
+    modalView: {
+        justifyContent: "flex-start",
+        backgroundColor: "#041E42",
+        padding: 20,
+        alignItems: "baseline",
+
+        height: 0.95 * height,
+        width: width,
+        elevation: 5
+    },
+    modalContent: {
+        alignItems: 'center',
+    }
+
 });
 
 export default Announcement;
