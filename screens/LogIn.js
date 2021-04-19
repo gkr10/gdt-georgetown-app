@@ -93,17 +93,22 @@ const styles = StyleSheet.create({
     height: 40,
     width: '70%',
     margin: 12,
-    borderWidth: 3,
-    borderRadius: 10
+    borderWidth: 2,
+    borderRadius: 10,
+    shadowOffset: {width:4, height: 4},
+    shadowOpacity: .25,
+    borderColor: '#041E42',
+    fontFamily: 'SourceSansPro-Regular',
+    padding: '3%'
   },
   area:{
     alignItems: 'center',
-    top: '10%'
   },
     title: {
       fontSize: 30,
       fontFamily: 'SourceSansPro-SemiBold',
       margin: 20,
+      color: '#041E42'
       
       //justifyContent: 'space-evenly'
     },

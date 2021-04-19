@@ -23,7 +23,7 @@ const GUTSStyles = StyleSheet.create({
         elevation: 8,
         borderRadius: 25,
         width: width * .9,
-        height: height * .4,
+        height: height * .35,
         shadowOffset: {width:4, height: 4},
         shadowOpacity: .25,
         // flex: 1
