@@ -27,7 +27,7 @@ const Home = ({navigation, route}) => {
         var month = new Date().getMonth() + 1;
         var year = new Date().getFullYear();
 
-        return date + '/' + month + '/' + year;//format: dd-mm-yyyy;
+        return month + '/' + date + '/' + year;//format: dd-mm-yyyy;
     }
 
 
@@ -156,7 +156,7 @@ const Home = ({navigation, route}) => {
                     <Text style={HomeStyles.ButtonText1}>GU Farmer's Market</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('LogIn')} style={HomeStyles.ButtonContainer3}>
+                <TouchableOpacity activeOpacity={0.8} onPress = {() => navigation.navigate('LogIn')} style={HomeStyles.ButtonContainer2}>
                     <Text style={HomeStyles.ButtonText1}>Profile</Text>
                 </TouchableOpacity>
                 
