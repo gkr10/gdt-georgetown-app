@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import Dining from './screens/Dining';
+import Dining from '../screens/Dining';
 
 const {width, height} = Dimensions.get('window');
 
