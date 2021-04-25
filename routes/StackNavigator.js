@@ -10,6 +10,10 @@ import Home from '../screens/Home';
 import LogIn from '../screens/LogIn';
 import GUTS from '../screens/GUTS';
 import Dining from '../screens/Dining';
+import Leos from '../screens/DiningOptions/Leos'; 
+import LeosMKT from '../screens/DiningOptions/LeosMKT';  
+import RoyalJacket from '../screens/DiningOptions/RoyalJacket';
+import Hilltoss from '../screens/DiningOptions/Hilltoss';
 
 const {width, height} = Dimensions.get('window');
 
@@ -85,7 +89,75 @@ const StackNavigatorMain = () =>(
                 ),
                 
         })}/>
-        
+
+        <Stack.Screen
+            name="Leo's" 
+            component={Leos} 
+            options={({navigation}) => ({
+                headerStyle: {
+                    backgroundColor: '#C4C4C4',
+                    height: height * .15,
+                },
+                headerRight: () => (
+                    <MaterialCommunityIcons name="bell-ring" size={33} color="white" style={{marginHorizontal: 30}}/>
+                ),
+                headerTitle: () => (
+                    <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
+                ),
+                
+        })}/>
+
+        <Stack.Screen
+            name="Leo's Market" 
+            component={LeosMKT} 
+            options={({navigation}) => ({
+                headerStyle: {
+                    backgroundColor: '#C4C4C4',
+                    height: height * .15,
+                },
+                headerRight: () => (
+                    <MaterialCommunityIcons name="bell-ring" size={33} color="white" style={{marginHorizontal: 30}}/>
+                ),
+                headerTitle: () => (
+                    <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
+                ),
+                
+        })}/>
+
+    <Stack.Screen
+            name="Royal Jacket Deli" 
+            component={RoyalJacket} 
+            options={({navigation}) => ({
+                headerStyle: {
+                    backgroundColor: '#C4C4C4',
+                    height: height * .15,
+                },
+                headerRight: () => (
+                    <MaterialCommunityIcons name="bell-ring" size={33} color="white" style={{marginHorizontal: 30}}/>
+                ),
+                headerTitle: () => (
+                    <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
+                ),
+                
+        })}/>
+
+    <Stack.Screen
+            name="Hilltoss" 
+            component={Hilltoss} 
+            options={({navigation}) => ({
+                headerStyle: {
+                    backgroundColor: '#C4C4C4',
+                    height: height * .15,
+                },
+                headerRight: () => (
+                    <MaterialCommunityIcons name="bell-ring" size={33} color="white" style={{marginHorizontal: 30}}/>
+                ),
+                headerTitle: () => (
+                    <Image source={logo} style={{width: 180, height: 40, resizeMode: "contain"}} />
+                ),
+                
+        })}/>
+
     </Stack.Navigator>
 );
 

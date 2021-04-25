@@ -6,13 +6,10 @@ import {
   Dimensions,
   SafeAreaView,
   TouchableOpacity,
-  Modal,
-  Button,
   Image,
 } from "react-native";
 import { ScrollView, TouchableHighlight } from "react-native-gesture-handler";
 import DiningStyles from "../styles/DiningStyles";
-import moment, { min } from "moment";
 
 const Dining = ({ navigation }) => {
   const { width, height } = Dimensions.get("window");
@@ -50,18 +47,21 @@ const Dining = ({ navigation }) => {
     } else if (timeInMinutes > dinnerEnd) {
       message = "Serving breakfast tomorrow at 9:00AM";
     }
-    // console.log(timeInMinutes);
     return message;
   }
+ 
   return (
     <SafeAreaView>
       <ScrollView style={{}}>
         <View style={styles.container}>
           <View style={DiningStyles.diningContainer}>
             <Image source={require("../assets/leos.png")} />
-            <View>
+            <TouchableOpacity
+              onPress={() => navigation.push("Leo's")}
+              
+              >
               <Text style={{ fontSize: 25, fontWeight: "600" }}>
-                The Table at Leo's
+                The Table at Leo's 
               </Text>
               <Text style={{ fontSize: 15, fontWeight: "600" }}>
                 Accepts Meal Swipes
@@ -70,14 +70,17 @@ const Dining = ({ navigation }) => {
                 {" "}
                 Location: Leo O'Donovan Hall {"\n"} {getCurrentMeal()}
               </Text>
-            </View>
+            </TouchableOpacity>
           </View>
           <View style={DiningStyles.diningContainer}>
+          <View style={{elevation: 8, borderRadius: 25, 
+          shadowOffset: {width:4, height:4}, shadowOpacity: .25}}>
             <Image
               style={{ margin: 10 }}
               source={require("../assets/launch.png")}
             />
-            <View>
+            </View>
+            <TouchableOpacity onPress={() => navigation.push("Leo's Market")}>
               <Text style={{ fontSize: 25, fontWeight: "600" }}>
                 LEO MKT | Launch{" "}
               </Text>
@@ -89,7 +92,7 @@ const Dining = ({ navigation }) => {
                 Location: Leo O'Donovan Hall {"\n"} Open: Monday - Friday (11 AM
                 - 7 PM)
               </Text>
-            </View>
+            </TouchableOpacity>
           </View>
 
           <View style={DiningStyles.diningContainer}>
@@ -104,7 +107,7 @@ const Dining = ({ navigation }) => {
               <Image source={require("../assets/royal_jacket.png")} />
             </View>
 
-            <View>
+            <TouchableOpacity onPress={() => navigation.push("Royal Jacket Deli")}>
               <Text style={{ fontSize: 25, fontWeight: "600" }}>
                 Royal Jacket Deli
               </Text>
@@ -116,7 +119,7 @@ const Dining = ({ navigation }) => {
                 Location: Leavy Center {"\n"} Open: Monday - Friday (7 AM - 6
                 PM)
               </Text>
-            </View>
+            </TouchableOpacity>
           </View>
 
           <View style={DiningStyles.diningContainer}>
@@ -131,7 +134,7 @@ const Dining = ({ navigation }) => {
               <Image source={require("../assets/corp.png")} />
             </View>
 
-            <View>
+            <TouchableOpacity onPress={() => navigation.push("Hilltoss")}>
               <Text style={{ fontSize: 25, fontWeight: "600" }}>Hilltoss</Text>
               <Text style={{ fontSize: 15, fontWeight: "600" }}>
                 Accepts: Flex Dollars
@@ -141,7 +144,7 @@ const Dining = ({ navigation }) => {
                 Location: HSFC {"\n"} Open: Monday - Friday (11 AM - 6 PM){" "}
                 {"\n"} & Saturday (12 - 6 PM)
               </Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -151,12 +154,8 @@ const Dining = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    //   alignItems: 'center',
-    //justifyContent: 'space-evenly'
+    backgroundColor: "#fff"
   },
 });
-
-// console.log(JSON.parse(JSON.stringify(dupontData))["depart times"][0]);
 
 export default Dining;
