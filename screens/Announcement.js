@@ -1,10 +1,12 @@
 import { localeData, min } from "moment";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, ActivityIndicator, Dimensions, Image, Button, Modal, TouchableWithoutFeedback, ScrollView } from "react-native";
-import * as Progress from 'react-native-progress';
 import SwipeCards from "react-native-swipe-cards-deck";
 import jack from '../assets/bulldog.png';
 import logo from '../assets/logoWhite.png';
+import * as Progress from 'react-native-progress';
+
+
 const { width, height } = Dimensions.get('window');
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
 const EXAMPLE_MESSAGE = 'April 14, 2021\n \nDear Members of the Georgetown University Community: \n \nAs I shared in my message on March 25, we anticipate that the conditions will be in place this fall to bring our community back and resume more regular life on our campuses. Our gradual return is beginning this summer, with a full return of our community for the fall.';
@@ -28,7 +30,7 @@ const Announcement = ({ navigation }) => {
                 { index: 5, title: "Annoucement #5", backgroundColor: "#041E42", content: lorem },
                 { index: 6, title: "Annoucement #6", backgroundColor: "#041E42", content: lorem },
             ]);
-        }, 1000);
+        }, 0);
     }
     function handleYup(card) {
         return true; // return false if you wish to cancel the action
@@ -39,11 +41,11 @@ const Announcement = ({ navigation }) => {
     function handleMaybe(card) {
         return true;
     }
-
-    function incrementProgress(card) {
+    function incrementProgress() {
         setProgress(progress + 1 / 6)
         return true;
     }
+   
 
     function endOfCards() {
         return (
@@ -53,7 +55,7 @@ const Announcement = ({ navigation }) => {
 
 
     function Card({ data }) {
-        console.log(data.index)
+        //console.log(data.index)
         return (
             <View style={[styles.card, { backgroundColor: data.backgroundColor }]}>
                 <Text style={styles.cardsTitle}>{data.title}</Text>
@@ -73,7 +75,7 @@ const Announcement = ({ navigation }) => {
                         </Button>
                         <ScrollView>
                             <View style={styles.modalContent}>
-                                <Text style={styles.cardsTitle}>{data.title} Detail</Text>
+                                <Text style={styles.cardsTitle}> Announcement Detail</Text>
                                 <Text style={styles.cardsContent}>{lorem}{"\n"}</Text>
                                 <Text style={styles.cardsContent}>{lorem}{"\n"}</Text>
                                 <Text style={styles.cardsContent}>{lorem}{"\n"}</Text>
