@@ -116,7 +116,7 @@ const Dining = ({ navigation }) => {
               </Text>
               <Text>
                 {" "}
-                Location: Leavy Center {"\n"} Open: Monday - Friday (7 AM - 6
+                Location: Leavey Center {"\n"} Open: Monday - Friday (7 AM - 6
                 PM)
               </Text>
             </TouchableOpacity>
