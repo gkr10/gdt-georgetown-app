@@ -59,7 +59,7 @@ const Announcement = ({ navigation }) => {
         return (
             <View style={[styles.card, { backgroundColor: data.backgroundColor }]}>
                 <Text style={styles.cardsTitle}>{data.title}</Text>
-                <Image source={logo} style={{ width: 200, height: 200, resizeMode: "contain" }} />
+                <Image source={logo} style={{ width: '40%', height: '40%', resizeMode: "contain" }} />
                 <Text style={styles.cardsContent}>{data.content}</Text>
                 <Button title="Read More" style={styles.readMore} onPress={() => setExpand(true)} />
 
@@ -157,10 +157,11 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontFamily: 'SourceSansPro-SemiBold',
         color: 'white',
-        marginBottom: 10
+        marginBottom: 10,
+        marginTop: 11
     },
     cardsContent: {
-        fontSize: 20,
+        fontSize: 16,
         fontFamily: 'SourceSansPro-SemiBold',
         color: 'white',
         paddingLeft: 20,
