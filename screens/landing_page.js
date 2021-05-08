@@ -43,10 +43,10 @@ export default LandingScreen;
 
 const styles = StyleSheet.create({
   todaylayout: {
-    marginTop: 50,
+    marginTop: '20%',
     alignSelf: 'center',
-    height: 250,
-    width: 450,
+    height: '115%',
+    width: '100%',
     borderRadius: 15,
     alignItems: 'center',
     paddingTop: 25,
@@ -57,10 +57,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   gridbutton: {
-    marginTop: 50,
+    marginTop: '5%',
     alignSelf: 'center',
-    height: 140,
-    width: 220,
+    height: '55%',
+    width: '45%',
     borderRadius: 35,
     alignItems: 'center',
     justifyContent: 'space-evenly',

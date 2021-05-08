@@ -295,8 +295,8 @@ const styles = StyleSheet.create({
     logocont: {
         marginTop: 20,
         borderRadius: 0,
-        height: 180,
-        width: 180,
+        height: '10%',
+        width: '10%',
         backgroundColor: '#1c1b19',
         alignItems: 'center',
         justifyContent: 'space-evenly'
@@ -304,8 +304,8 @@ const styles = StyleSheet.create({
     griditem: {
         marginTop: 20,
         borderRadius: 10,
-        height: 180,
-        width: 240,
+        height: '10%',
+        width: '15%',
         backgroundColor: '#3b4540',
         alignItems: 'center',
         justifyContent: 'space-evenly'
