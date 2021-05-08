@@ -1,5 +1,6 @@
 .DS_Store
 .expo/
+.expo/settings.json
 node_modules/
 .vscode/
 yarn-error.log

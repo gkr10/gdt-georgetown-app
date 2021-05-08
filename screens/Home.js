@@ -198,6 +198,7 @@ const Home = ({ navigation, route }) => {
         <TouchableOpacity
           activeOpacity={0.8}
           style={HomeStyles.ButtonContainer1}
+          onPress={() => navigation.push("LandingScreen")}
         >
           <Text style={HomeStyles.ButtonText1}>GU Farmer's Market</Text>
         </TouchableOpacity>
