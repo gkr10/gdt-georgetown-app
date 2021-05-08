@@ -62,8 +62,9 @@ const HomeStyles = StyleSheet.create({
         //lineHeight: 18,
     },
     modalView: {
-        //justifyContent: 'center',
-        alignSelf:'center',
+        justifyContent: 'space-evenly',
+        //alignContent: 'center',
+        //alignSelf:'center',
         //marginVertical: '30%',
         backgroundColor: '#E8E8E8',
         //opacity: 1,
@@ -71,7 +72,7 @@ const HomeStyles = StyleSheet.create({
         //elevation: 8,
         borderRadius: 20,
         width: width * .9,
-        height: height * .34,
+        height: height * .37,
         //marginLeft: '5%',
         //shadowOffset: {width:4, height: 4},
         //shadowOpacity: .25,
@@ -84,7 +85,8 @@ const HomeStyles = StyleSheet.create({
         alignContent: "center",
         //fontWeight: "600",
         marginLeft: '5%',
-        marginTop: '5%',
+        //marginTop: '5%',
+        //marginBottom: '5%'
     },
     modalTextTitle: {
         fontFamily: 'SourceSansPro-SemiBold',
@@ -93,8 +95,8 @@ const HomeStyles = StyleSheet.create({
         alignSelf: "center",
         //fontWeight: "600",
         //marginLeft: '5%',
-        paddingTop: '6%',
-        paddingBottom: '3%',
+        //paddingTop: '6%',
+        //paddingBottom: '3%',
     },
     /*gradient: {
         justifyContent: 'center',
